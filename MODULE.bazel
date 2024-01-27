@@ -1,0 +1,7 @@
+"""
+This module contains build rules for golang_hello.
+"""
+module(name = "golang_hello", version = "0.0.1")
+
+bazel_dep(name = "rules_go", version = "0.39.1")
+bazel_dep(name = "gazelle", version = "0.31.0")

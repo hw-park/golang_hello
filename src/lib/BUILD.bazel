@@ -1,8 +1,8 @@
 load("@rules_go//go:def.bzl", "go_library")
 
 go_library(
-    name = "hello_lib",
+    name = "lib",
     srcs = ["hello_lib.go"],
-    importpath = "github.com/hw-park/golang_hello/lib",
+    importpath = "github.com/hw-park/golang_hello/src/lib",
     visibility = ["//visibility:public"],
 )

@@ -1,0 +1,15 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_binary(
+    name = "golang_hello",
+    embed = [":src_lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "src_lib",
+    srcs = ["golang_hello.go"],
+    importpath = "github.com/hw-park/golang_hello/src",
+    visibility = ["//visibility:private"],
+    deps = ["//src/lib"],
+)

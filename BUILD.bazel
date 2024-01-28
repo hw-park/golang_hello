@@ -1,9 +1,4 @@
-load("@rules_go//go:def.bzl", "go_binary")
+load("@gazelle//:def.bzl", "gazelle")
 
-go_binary(
-    name = "golang_hello",
-    srcs = ["golang_hello.go"],
-    deps = [
-        "//lib:hello_lib",
-    ],
-)
+# gazelle:prefix github.com/hw-park/golang_hello
+gazelle(name = "gazelle")
